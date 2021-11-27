@@ -1,3 +1,9 @@
+python -m venv venv
+pip install django
+django-admin startproject core
+python manage.py startapp quiz
+pip install "graphene-django>=2.0"
+
 
 venv\Scripts\activate
 python manage.py runserver  
