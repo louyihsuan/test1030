@@ -1,0 +1,12 @@
+
+venv\Scripts\activate
+python manage.py runserver  
+python manage.py makemigrations
+python manage.py migrate  
+
+
+
+pip freeze > requirements.txt
+
+docker build --tag python-django .
+docker run --publish 8000:8000 python-django
